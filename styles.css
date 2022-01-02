@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+html,
+body {
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Big Shoulders Display', cursive;
+  color: #f2f2f2;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.75rem;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.grid {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 5rem 2rem;
+  max-width: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.grid div {
+  padding: 3rem;
+}
+
+.grid div img {
+  margin-bottom: 2rem;
+}
+
+.grid div a {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.8rem;
+  width: 150px;
+  text-align: center;
+  border-radius: 40px;
+  text-decoration: none;
+  background-color: #f2f2f2;
+  color: black;
+  mix-blend-mode: screen;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  -webkit-transition: background-color 100ms;
+  transition: background-color 100ms;
+}
+
+.grid div a:hover {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  mix-blend-mode: unset;
+  background-color: transparent;
+  color: white;
+}
+
+.grid div:nth-child(1) {
+  background-color: #e38826;
+}
+
+.grid div:nth-child(2) {
+  background-color: #006970;
+}
+
+.grid div:nth-child(3) {
+  background-color: #004241;
+}
+
+@media only screen and (min-width: 720px) {
+  .grid {
+    max-width: 1020px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: unset;
+        grid-template-rows: unset;
+  }
+  .grid div {
+    padding: 4rem;
+  }
+  .grid div a {
+    margin-top: 8rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

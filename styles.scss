@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+html,
+body {
+    font-size: 15px;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+    color: $very-light-gray;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: $transparent-white;
+    line-height: 1.75rem;
+}
+.container {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.grid {
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 5rem 2rem;
+    // layout styles
+    max-width: 600px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    div {
+        padding: 3rem;
+        img {
+            margin-bottom: 2rem;
+        }
+        a {
+            margin-top: 2rem;
+            display: inline-block;
+            padding: 0.8rem;
+            width: 150px;
+            text-align: center;
+            border-radius: 40px;
+            text-decoration: none;
+            // for knockout text effect, use mix-blend-mode
+            background-color: $very-light-gray;
+            color: black;
+            mix-blend-mode: screen;
+            // keep a border so the hover effect wont be as akward
+            border: 2px solid $transparent-white;
+            transition: background-color 100ms;
+            &:hover {
+                border: 2px solid $transparent-white;
+                mix-blend-mode: unset;
+                background-color: transparent;
+                color: white;
+            }
+        }
+    }
+    div:nth-child(1) {
+        background-color: $bright-orange;
+    }
+    div:nth-child(2) {
+        background-color: $dark-cyan;
+    }
+    div:nth-child(3) {
+        background-color: $very-dark-cyan;
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    .grid {
+        max-width: 1020px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: unset;
+        div {
+            padding: 4rem;
+            a {
+                margin-top: 8rem;
+            }
+        }
+    }
+}
