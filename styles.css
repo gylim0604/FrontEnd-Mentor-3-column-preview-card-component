@@ -47,6 +47,8 @@ p {
 }
 
 .grid div a {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
   margin-top: 2rem;
   display: inline-block;
   padding: 0.8rem;
